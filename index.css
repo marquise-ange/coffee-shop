@@ -261,8 +261,8 @@ header .navbar {
 
 .menu-section {
     color: var(--white-color);
-
     background: var(--dark-color);
+    padding: 50px 0 100px;
 }
 
 .menu-section .menu-list {
@@ -279,13 +279,14 @@ header .navbar {
     text-align: center;
     flex-direction: column;
     justify-content: space-between;
-    width: calc(100% / 3 -110px);
+    width: calc(100% / 3 - 110px);
 }
 
 .menu-section .menu-list .menu-item .menu-image {
     max-width: 83%;
     aspect-ratio: 1;
-
+    margin-bottom: 15px;
+    object-fit: contain;
 }
 
 .menu-section .menu-list .menu-item .name {
@@ -294,8 +295,68 @@ header .navbar {
     font-weight: var(--font-weight-semibold);
 }
 
-/*responsive styling query code with 1024px*/
+.menu-section .menu-list .menu-item .text {
+    font-size: var(--font-size-m);
+}
 
+/*testimonals section styling*/
+.testimonals-section{
+    padding:50px 0 100px;
+    background:var(--light-pink-color);
+}
+
+.testimonals-section .slider-wrapper{
+    overflow:hidden;
+    margin:0 60px 50px;
+
+}
+
+.testimonals-section .testimonal{
+    display:flex;
+    padding:35px;
+    text-align:center;
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.testimonals-section .testimonal .user-image{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    margin-bottom:50px;
+    border-radius:var(--border-radius-circle);
+}
+
+.testimonals-section .testimonal .name{
+    margin-bottom:16px;
+    font-size:var(--font-size-m); 
+}
+
+.testimonals-section .testimonal .name .feedback{
+    line-height:25px;
+
+}
+
+.testimonals-section .swiper-pagination-bullet{
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    background: var(--secondary-color);
+}
+
+.testimonals-section .swiper-slide-button{
+    margin-top: -50px;
+color: var(--secondary-color);
+transition: 0.3s ease;
+
+}
+
+.testimonals-section .swiper-slide-button:hover{
+    color: var(--primary-color)
+}
+
+/*responsive styling query code with 1024px*/
 @media screen and (max-width: 1024px) {
     .menu-section .menu-list {
         gap: 60px;
@@ -407,4 +468,36 @@ header .navbar {
         max-width: 250px;
         aspect-ratio: 1;
     }
+
+    .menu-section .menu-list {
+        gap: 30px;
+    }
+
+    .menu-section .menu-list .menu-item {
+        width: calc(100% / 2 - 30px);
+    }
+
+    .menu-section .menu-list .menu-item .menu-image {
+        max-width: 200px;
+    }
+}
+
+/*responsive styling query code with 640px*/
+@media screen and (max-width: 640px) {
+
+    .menu-section .menu-list {
+        gap: 60px;
+    }
+
+    .menu-section .menu-list .menu-item {
+        width: 100%;
+    }
+
+.testimonals-section .slider-wrapper{
+    margin:0 0 30px;
+}
+ .testimonals-section .swiper-slide-button{
+    display:none;
+ }
+
 }
